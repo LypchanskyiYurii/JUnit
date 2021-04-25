@@ -25,10 +25,15 @@ class DogTest {
     }
 
     @org.junit.jupiter.api.Test
-    void getAge() {
+    void testGetDogAge() {
+        Dog dog = new Dog("Rey", 15);
+        assertEquals(15, dog.getAge());
     }
 
     @org.junit.jupiter.api.Test
-    void setAge() {
+    void testSetDogAge() {
+        Dog dog = new Dog("Rey", 10);
+        dog.setAge(15);
+        assertEquals(10, dog.getAge());
     }
 }

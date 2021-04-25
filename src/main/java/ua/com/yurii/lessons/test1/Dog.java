@@ -24,7 +24,9 @@ public class Dog {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age == this.age) {
+            this.age = age;
+        }
     }
 
     @Override
