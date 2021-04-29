@@ -1,12 +1,22 @@
 package ua.com.yurii.lessons.test1;
 
+import java.io.IOException;
+
 public class Dog {
     private String name;
     private int age;
 
     public Dog(String name, int age) {
         this.name = name;
-        this.age = age;
+        if (age <= 0) {
+            try {
+                throw new IOException();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            this.age = age;
+        }
     }
 
     public String getName() {

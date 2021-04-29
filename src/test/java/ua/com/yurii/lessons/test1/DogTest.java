@@ -33,7 +33,7 @@ class DogTest {
     @org.junit.jupiter.api.Test
     void testSetDogAge() {
         Dog dog = new Dog("Rey", 10);
-        dog.setAge(15);
+        dog.setAge(-15);
         assertEquals(10, dog.getAge());
     }
 }
